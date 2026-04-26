@@ -92,15 +92,17 @@ builder.Services.AddAuthorization();
 // CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .AllowAnyOrigin()
+            .WithOrigins(
+                "http://localhost:5173",
+                "https://icy-island-042be7d0f.7.azurestaticapps.net"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
-
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -122,8 +124,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowReactApp");
-
+app.UseCors("AllowFrontend");
 // IMPORTANT ORDER
 app.UseAuthentication();
 app.UseAuthorization();
