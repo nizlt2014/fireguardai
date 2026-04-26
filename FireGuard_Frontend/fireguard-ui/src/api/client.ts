@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://localhost:7071/api"
+  baseURL: "https://fireguardai.azurewebsites.net/api"
 });
 
 // Attach token to every request
