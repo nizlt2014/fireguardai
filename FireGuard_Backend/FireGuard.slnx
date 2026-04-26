@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="FireGuard.API/FireGuard.API.csproj" />
+  <Project Path="FireGuard.Application/FireGuard.Application.csproj" />
+  <Project Path="FireGuard.Domain/FireGuard.Domain.csproj" />
+  <Project Path="FireGuard.Infrastructure/FireGuard.Infrastructure.csproj" />
+  <Project Path="FireGuard.Tests/FireGuard.Tests.csproj" />
+</Solution>
